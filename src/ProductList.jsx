@@ -2,7 +2,8 @@ import React, { useState,useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
 import  { addItem } from './CartSlice';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 
 
@@ -12,6 +13,7 @@ function ProductList() {
     const [addedToCart, setAddedToCart] = useState({});
     const dispatch = useDispatch();
 
+    
     const plantsArray = [
         {
             category: "Air Purifying Plants",
